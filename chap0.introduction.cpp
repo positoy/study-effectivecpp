@@ -70,12 +70,35 @@ int main()
     doSomething(B(12));
 
     // 4. copy constructor, copy assignment operator
+    // --> 구현하지 않더라도 기본적으로 복사생성자, 복사대입연산자가 있음.
+    // --> 하지만! 깊은 복사를 하려면 직접 구현해줘야 함.
+    // --> 얕은 복사의 우려 때문에 사용자정의 타입은 상수객체에 대한 참조로 넘기는 것이 더 좋음
     CC c;
     CC c2(c);
     CC c3 = c;
     c.print();
     c2.print();
     c3.print();
+
+    // 5. 함수객체
+    
+    // 6. 미정의동작 (undefined behavior)
+    // int *p = 0;
+    // std::cout << *p; --> p는 null 포인터!
+    // char name[] = "darla";
+    // char c = name[10]; --> name의 사이즈는 6!
+
+    // 7. 인터페이스
+
+    // 8. 사용자
+    // 고객(=코드재사용자) 중심의 마인드!
+
+    // 9. 생성자(ctor), 소멸자(dtor)
+
+    // 10. 네이밍 (lhs, rhs, papple)
+
+    // 11. 스레딩
+    
 
     
 }
